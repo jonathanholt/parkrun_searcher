@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>ParkRunSearchServlet</servlet-name>
+		<servlet-class>com.jonathanholt.parkrun.ParkRunSearchServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ParkRunSearchServlet</servlet-name>
+		<url-pattern>/parkrunsearch</url-pattern>
+	</servlet-mapping>
+		<servlet>
+		<servlet-name>ParkRunAddScriptServlet</servlet-name>
+		<servlet-class>com.jonathanholt.parkrun.ParkRunAddScriptServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ParkRunAddScriptServlet</servlet-name>
+		<url-pattern>/parkrunaddscript</url-pattern>
+	</servlet-mapping>
+			<servlet>
+		<servlet-name>ParkRunAllServlet</servlet-name>
+		<servlet-class>com.jonathanholt.parkrun.ParkRunAllServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ParkRunAllServlet</servlet-name>
+		<url-pattern>/parkrunall</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>

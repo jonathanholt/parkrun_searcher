@@ -1,0 +1,463 @@
+<html>
+<head>
+<style>
+tr:hover td {background: blue;
+cursor: pointer;}
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: opensanslight;
+    src: url('./OpenSans-Light.ttf');
+}
+
+@font-face {
+    font-family: europe;
+    src: url('./EuropeUnderground_light.ttf');
+}
+
+@font-face {
+    font-family: lato;
+    src: url('./Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: raleway;
+    src: url('./Raleway-Regular.ttf');
+}
+
+.title{
+text-align: center;
+font-family: opensanslight;
+}
+
+.title2{
+text-align: center;
+font-family: europe;
+font-size: 40px;
+letter-spacing: 1.5px;
+}
+
+
+
+.centerpiece{
+margin-left: 27%;
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    height: 80%;
+    width: 95%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.main-area {
+    margin-left: auto;
+    margin-right: auto; 
+}
+.title{
+font-size: 40px;
+}
+.search::-webkit-input-placeholder {
+font-family: opensanslight;
+}
+
+.search{
+font-size:20px;
+height: 45px;
+width: 600px;
+background-image: url("paper.gif");
+background: url("./greypin.png") no-repeat 0px 5px, linear-gradient(to bottom, #f7f7f8 0%,#ffffff 100%);
+  background-size: 30px 30px, auto;
+  border-radius: 3px;
+  border-top: 1px solid silver;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2) inset, 0 -1px 0 rgba(0,0,0,0.05) inset;
+  transition: all 0.2s linear;
+  color: #222222;
+  position: relative;
+  padding-left: 30px;
+  
+  
+`-moz-box-shadow:    0px 3px 10px 0px #ccc;
+  -webkit-box-shadow: 0px 3px 10px 0px #ccc;
+  box-shadow:         0px 3px 10px 0px #ccc;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+border-style: solid;
+border-color: black;
+}
+
+#magnify{
+height: 42px;
+width: 42px;
+margin-bottom: -12px;
+}
+
+.runningimage{
+height: 40px;
+width: 40px;
+margin-bottom: -11px;
+    margin-left: 10px;
+}
+#map{
+float: right;
+display: inline;
+}
+
+.leftbar{
+float: left;
+margin-left: 0;
+}
+
+.lefttitle{
+text-align: left;
+}
+
+.results-table{
+display: none;
+float: left;
+}  
+    #wrapper {
+        float: left;
+        width: 200px;
+    }
+    
+    .floatleft{
+    float: left;
+    width: 100%;
+    }
+
+</style>
+<title>Find your nearest parkrun </title>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPQ_lZgfZYY6IKror41ixzV2zhmJRTMFw&libraries=geometry&sensor=false"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+<body  onload="initialize()">
+
+<div class="outer">
+  <div class="middle">
+<div class="main-area">
+
+
+<div class="mainstuff">
+<h1 class="title2 title3">
+Find your nearest parkrun   
+<a href="http://www.parkrun.org.uk" target="_blank">
+<img class="runningimage" src="./rabbit.png">
+</a>  
+</h1>
+<div class="centerpiece">
+<input class="search" id="address" type="text" name="search" placeholder="Postcode, city, town...">
+<img id="magnify" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Magnifying_glass_Icon.png" onclick="codeAddress()">
+<h6 class="title2" style="font-size: 10px; margin-left: -90px;">Click on the bunny rabbit to find out more about parkrun  
+</h6>
+</div>
+</div>
+<!--
+<iframe id="parkrunmap" src="https://www.google.com/maps/d/embed?mid=1sNWC0xC3J_Pz3XJL8hLodlszv9Q&hl=en" width="640" height="480"></iframe>
+-->
+
+
+
+
+<div class="wrapper">
+<table class="results-table">
+<tr>
+<td>
+<a href="www.google.com" style="color: black;">
+<b>
+<span style="font-family: europeblack;
+font-size: 16px;
+font-weight: 900;
+">
+1. Oldham Parkrun (10 miles away)
+</span>
+</b>
+</a>
+<br>
+<span>
+<br> Alexandra Park
+<br> 12 King Street
+<br> Oldham
+<br> OL 1TU
+</span>
+</td>
+</tr>
+<tr style="padding-top: 20px;">
+<td style="padding-top: 20px;">
+<a href="www.google.com" style="color: black;">
+<b>
+<span style="font-family: europeblack;
+font-size: 16px;
+font-weight: 900;
+">
+2. Fallowfield Parkrun (10 miles away)
+</span>
+</b>
+</a>
+<br>
+<br> Alexandra Park
+<br> 12 King Street
+<br> Oldham
+<br> OL 1TU
+</td>
+</tr>
+<tr  style="margin-top: 20px;">
+<td style="padding-top: 20px;"> 
+<a href="www.google.com" style="color: black;">
+<b>
+<span style="font-family: europeblack;
+font-size: 16px;
+font-weight: 900;
+">
+1. Oldham Parkrun (10 miles away)
+</span>
+</b>
+</a>
+<br>
+<br> Alexandra Park
+<br> 12 King Street
+<br> Oldham
+<br> OL 1TU
+</td>
+</tr>
+<tr  style="margin-top: 20px;">
+<td style="padding-top: 20px;">
+<a href="www.google.com" style="color: black;">
+<b>
+<span style="font-family: europeblack;
+font-size: 16px;
+font-weight: 900;
+">
+1. Oldham Parkrun (10 miles away)
+</span>
+</b>
+</a>
+<br>
+<br> Alexandra Park
+<br> 12 King Street
+<br> Oldham
+<br> OL 1TU
+</td>
+</tr>
+<tr  style="margin-top: 20px;">
+<td style="padding-top: 20px;">
+<a href="www.google.com" style="color: black;">
+<b>
+<span style="font-family: europeblack;
+font-size: 16px;
+font-weight: 900;
+">
+1. Oldham Parkrun (10 miles away)
+</span>
+</b>
+</a>
+<br>
+<br> Alexandra Park
+<br> 12 King Street
+<br> Oldham
+<br> OL 1TU
+</td>
+</tr>
+</table>
+<div id="map" style="width:1px; height: 1px;"></div>
+</div>
+
+<table id="test"></table>
+
+<div id="boo"></div>
+
+<div id="blah"></div>
+
+<div id="dude"></div>
+
+
+<script>
+var runs = ["Wepre","Wetherby","Weymouth","Whitley Bay","Whitstable","Widnes","Wilmslow"];
+            //"Wimbledon Common","Wimpole Estate","Winchester","Witton","Woking","Wolverhampton","Woodbank","Woodhouse Moor","Woodley","Worcester","Workington","Wormwood Scrubs","Worsley Woods","Worthing","Wotton","Wycombe Rye","Wyre Forest","Wythenshawe","Yeovil Montacute","York"];
+
+jQuery(document).ready(function(){
+console.log('lets go!!!');
+geocoder = new google.maps.Geocoder();
+output = "";
+console.log('lets go');
+for(i = 0; i < runs.length; i++){
+testerFunction(runs[i], geocoder);
+}
+});
+
+function testerFunction(run, geocoder){
+setTimeout(geocoder.geocode( { 'address': runs[i]}, function(results, status) {
+  if (status == 'OK') {
+  var div = document.getElementById('blah');
+  var div2 = document.getElementById('boo');
+  var div3 = document.getElementById('dude');
+  div.innerHTML = div.innerHTML + '<br>' + results[0].geometry.location.lat();
+  div2.innerHTML = div2.innerHTML + '<br>' + run;
+  div3.innerHTML = div3.innerHTML + '<br>' + results[0].geometry.location.lng();
+  output += "hello<br>";    
+  } else {
+   alert('Geocode was not successful for the following reason: ' + status);
+   console.log(run);
+ }
+}), 850);
+}
+
+// ***** ADDING SOME VARIABLES *****//
+var geocoder;
+var map;
+var locations = [
+                 ['Title A', 3.180967,101.715546, 1],
+                 ['Title B', 3.200848,101.616669, 2],
+                 ['Title C', 3.147372,101.597443, 3],
+                 ['Title D', 3.19125,101.710052, 4]
+            ];
+            
+// ***** INITIALIZE FUNCTION *****//
+function initialize() {
+  geocoder = new google.maps.Geocoder();
+  var latlng = new google.maps.LatLng(-34.397, 150.644);
+  var mapOptions = {
+    zoom: 8,
+    center: latlng
+  }
+  map = new google.maps.Map(document.getElementById('map'), mapOptions);
+}
+
+
+
+
+function codeAddress() {
+ jQuery('#map').css("width", "600px");
+jQuery('#map').css("height", "400px");
+initialize();
+centralLocation = null;
+var address = document.getElementById('address').value;
+geocoder.geocode( { 'address': address}, function(results, status) {
+  if (status == 'OK') {
+      
+    centralLocation = new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng());
+      map.setCenter(results[0].geometry.location);
+    var marker = new google.maps.Marker({
+        map: map,
+        position: results[0].geometry.location
+    });
+    //alert("succeeded");
+               
+               
+  tester(centralLocation);
+  } else {
+    alert('Geocode was not successful for the following reason: ' + status);
+  }
+});
+}
+
+function tester(oldCenter){
+
+    
+    
+output = "<table class='results-table'>";
+     jQuery.ajax({
+         type : "GET",
+         url : "/parkrunsearch",
+         data:{"name":"abc","address":"cde"},
+         dataType: 'json',
+         success : function(data) { 
+        for(i = 0; i < data.length; i++){
+         
+
+           
+           
+        var parkrunLocation = new google.maps.LatLng(data[i].latitude, data[i].longitude);
+      var distance = parseFloat(calcDistance(parkrunLocation, oldCenter));
+      //alert("Distance = "+distance);
+      var icon = {
+         url: data[i].markerUrl, // url
+         scaledSize: new google.maps.Size(50, 50), // scaled size
+         origin: new google.maps.Point(0,0), // origin
+         anchor: new google.maps.Point(0, 0) // anchor
+      };
+      
+      var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+            'sandstone rock formation in the southern part of the '+
+            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+            'south west of the nearest large town, Alice Springs; 450&#160;km '+
+            '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+            'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+            'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+            'Aboriginal people of the area. It has many springs, waterholes, '+
+            'rock caves and ancient paintings. Uluru is listed as a World '+
+            'Heritage Site.</p>'+
+            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+            '(last visited June 22, 2009).</p>'+
+            '</div>'+
+            '</div>';
+            
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+              });
+
+      var marker = new google.maps.Marker({
+             map: map,
+             position: parkrunLocation,
+            icon: icon,
+             title: 'Uluru (Ayers Rock)'
+         });
+      marker.addListener('click', function() {
+               infowindow.open(map, marker);
+             });
+      
+       
+       
+      output += "<tr class='shadowonhover' style='margin-top: 20px;'><td style='padding-top: 20px;'><a href='"+data[i].parkrunUrl+"' style='color: black;'><b><span style='font-family: europeblack;font-size: 16px;font-weight: 900;'>" + (i + 1) +". " + "test" + " (" + distance +" miles away)</span></b></a><br><br> "+data[i].parkrunAddress+"</td></tr>";
+      output += data[i].parkrunName;
+         }
+             output += "</table>"
+                 jQuery('#test').html(output);
+     }
+     });
+}
+
+
+// calculates distance between two points in miles
+function calcDistance(p1, p2){
+    return (google.maps.geometry.spherical.computeDistanceBetween(p1, p2) / 1000 / 1.6).toFixed(2);
+}
+
+function executeInOrder(data){
+}
+
+</script>
+</div>
+</div>
+</div>
+</body>
+</html>

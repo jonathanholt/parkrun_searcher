@@ -1,0 +1,19 @@
+@font-face {
+    font-family: opensanslight;
+    src: url('../fonts/OpenSans-Light.ttf');
+}
+
+@font-face {
+    font-family: europe;
+    src: url('../fonts/EuropeUnderground_light.ttf');
+}
+
+@font-face {
+    font-family: lato;
+    src: url('../fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: raleway;
+    src: url('../fonts/Raleway-Regular.ttf');
+}
