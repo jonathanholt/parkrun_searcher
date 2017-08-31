@@ -1,9 +1,28 @@
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
+    .links{
+    font-size: 12px;
+    margin-left: 25%;
+    }
+    
+    .mistake{
+    font-size: 12px;
+    display: none;
+    margin-left: 20px;
+    }
+
+b{
+font-size: 16px;
+}
 
 
+.title6{
+font-size: 14px;
+    margin-left: 24%;
+}
 
 .hideme{
 display: none;
@@ -39,15 +58,18 @@ font-family: opensanslight;
 
 .title2{
 text-align: center;
-font-family: europe;
+font-family: Arial, sans-serif, Helvetica;
 font-size: 40px;
 letter-spacing: 1.5px;
 }
 
+.headerInner{
+background-color: black;
+}
 
 
 .centerpiece{
-margin-left: 27%;
+margin-left: 20%;
 }
 
 .outer {
@@ -76,7 +98,7 @@ font-family: opensanslight;
 .search{
 font-size:20px;
 height: 45px;
-width: 600px;
+width: 70%;
 background-image: url("paper.gif");
 background: url("./greypin.png") no-repeat 0px 5px, linear-gradient(to bottom, #f7f7f8 0%,#ffffff 100%);
   background-size: 30px 30px, auto;
@@ -108,6 +130,7 @@ border-color: black;
 height: 42px;
 width: 42px;
 margin-bottom: -12px;
+cursor: pointer;
 }
 
 .runningimage{
@@ -120,6 +143,99 @@ margin-bottom: -11px;
 float: right;
 display: inline;
 }
+
+.largeone{
+width: 700px;
+height: 400px;
+}
+
+/**
+@media screen and (max-width: 555px) and (min-width: 333px) {
+.largeone{
+width: 100%;
+}
+
+.title2{
+font-size: 5vw;
+}
+}
+
+
+@media screen and (max-width: 332px) {
+
+.largeone{
+width: 100%;
+}
+.title2{
+font-size: 13px;
+}
+}
+**/
+
+@media screen and (max-width:420px)  {
+select{
+height: 34px;
+    width: 80px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    }
+    
+span{
+font-size: 22px;
+}
+
+.mistake a{
+font-size: 12px;
+margin-left: 22%;
+}
+
+.links a{
+font-size: 12px;
+}
+
+
+
+a{
+font-size: 20px;
+}
+
+
+.links{
+	margin-left: 18%;
+}
+
+.title6{
+margin-left: 1%;
+}
+
+.centerpiece{
+margin-left: 0px;
+}
+
+
+.largeone{
+width: 100%;
+}
+.title2{
+width: 100%;
+font-size: 25px;
+margin-left: 0px;
+}
+
+.search{
+width: 82%;
+height: 48px;
+    background-size: 33px 33px, auto;
+    font-size: 24px;
+    padding-left: 34px;
+}
+
+#magnify{
+height: 50px;
+width: 50px;
+}
+}
+
 
 .leftbar{
 float: left;
@@ -155,9 +271,15 @@ float: left;
     #floating-panel{
     display: none;
     }
+    
+    .shadowonhover:hover{
+    background: #DCDCDC;
+    cursor: pointer;
+    } 
+    
 
 </style>
-<title>Find your nearest parkrun </title>
+<title>Parkrun Search </title>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPQ_lZgfZYY6IKror41ixzV2zhmJRTMFw&libraries=geometry&sensor=false"></script>
@@ -182,8 +304,8 @@ Find your nearest parkrun
 </h1>
 <div class="centerpiece">
 <input class="search" id="address" type="text" name="search" placeholder="Postcode, city, town...">
-<img id="magnify" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Magnifying_glass_Icon.png" onclick="codeAddress()">
-<h6 class="title2" style="font-size: 10px; margin-left: -90px;">Click on the bunny rabbit to find out more about parkrun  
+<img id="magnify" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-search-strong-128.png" onclick="codeAddress()">
+<h6 class="title6"><a href="http://www.parkrun.org.uk/" target="_blank">Click here to find out more about parkrun</a>
 </h6>
 </div>
 </div>
@@ -204,109 +326,17 @@ Find your nearest parkrun
       <option value="TRANSIT">Transit</option>
     </select>
     </div>
-<table class="results-table">
-<tr>
-<td>
-<a href="www.google.com" style="color: black;">
-<b>
-<span style="font-family: europeblack;
-font-size: 16px;
-font-weight: 900;
-">
-1. Oldham Parkrun (10 miles away)
-</span>
-</b>
-</a>
-<br>
-<span>
-<br> Alexandra Park
-<br> 12 King Street
-<br> Oldham
-<br> OL 1TU
-</span>
-</td>
-</tr>
-<tr style="padding-top: 20px;">
-<td style="padding-top: 20px;">
-<a href="www.google.com" style="color: black;">
-<b>
-<span style="font-family: europeblack;
-font-size: 16px;
-font-weight: 900;
-">
-2. Fallowfield Parkrun (10 miles away)
-</span>
-</b>
-</a>
-<br>
-<br> Alexandra Park
-<br> 12 King Street
-<br> Oldham
-<br> OL 1TU
-</td>
-</tr>
-<tr  style="margin-top: 20px;">
-<td style="padding-top: 20px;"> 
-<a href="www.google.com" style="color: black;">
-<b>
-<span style="font-family: europeblack;
-font-size: 16px;
-font-weight: 900;
-">
-1. Oldham Parkrun (10 miles away)
-</span>
-</b>
-</a>
-<br>
-<br> Alexandra Park
-<br> 12 King Street
-<br> Oldham
-<br> OL 1TU
-</td>
-</tr>
-<tr  style="margin-top: 20px;">
-<td style="padding-top: 20px;">
-<a href="www.google.com" style="color: black;">
-<b>
-<span style="font-family: europeblack;
-font-size: 16px;
-font-weight: 900;
-">
-1. Oldham Parkrun (10 miles away)
-</span>
-</b>
-</a>
-<br>
-<br> Alexandra Park
-<br> 12 King Street
-<br> Oldham
-<br> OL 1TU
-</td>
-</tr>
-<tr  style="margin-top: 20px;">
-<td style="padding-top: 20px;">
-<a href="www.google.com" style="color: black;">
-<b>
-<span style="font-family: europeblack;
-font-size: 16px;
-font-weight: 900;
-">
-1. Oldham Parkrun (10 miles away)
-</span>
-</b>
-</a>
-<br>
-<br> Alexandra Park
-<br> 12 King Street
-<br> Oldham
-<br> OL 1TU
-</td>
-</tr>
-</table>
-<div id="map" style="width:1px; height: 1px;"></div>
+<div id="map" style="display: none"></div>
 </div>
 
 <table id="test"></table>
+
+<div class="centerpiece">
+<h6 class="links">Created by <a href="http://www.jonathan-holt.co.uk/" target="_blank">Jonathan Holt</a> & <a href="https://uk.linkedin.com/in/alicia-boulter-656a4113a" target="_blank">Alicia Boulter</a></h6>
+<h6 class="title6 mistake"><a href='mailto:jonathanholt1989@gmail.com'>Spotted a mistake? Get in touch</a>
+</h6>
+</div>
+
 
 <p class="hideme" id="centrallat"></p>
 
@@ -358,8 +388,10 @@ function initialize() {
 
 function codeAddress() {
 
-	jQuery('#map').css("width", "600px");
-jQuery('#map').css("height", "400px");
+//jQuery('#map').css("width", "600px");
+//jQuery('#map').css("height", "400px");
+jQuery('#map').css("display", "relative");
+jQuery('#map').addClass('largeone');
 jQuery('#test').html('<img src="http://www.prague-rental-apartments.com/plugins/vdslider/loader.gif"/>');
 initialize();
 directionsDisplay.setMap(map);
@@ -393,7 +425,8 @@ function tester(oldCenter, latitude, longitude, oldlat, oldlong){
 	         url : "/parkrunsearch",
 	         data:{"lat":latitude,"long":longitude},
 	         dataType: 'json',
-	         success : function(data) { 
+	         success : function(data) {
+	 
 	        for(i = 0; i < data.length; i++){
 	      var parkrunLocation = new google.maps.LatLng(data[i].latitude, data[i].longitude);
 	      var distance = parseFloat(calcDistance(parkrunLocation, oldCenter));
@@ -488,7 +521,7 @@ function tester(oldCenter, latitude, longitude, oldlat, oldlong){
 	 		var finalstring = lowercase.replace(/ /g, '');      
 	       var parkrunURL = "http://www.parkrun.org.uk/"+ finalstring +"/";
 	       var parkrunPageUrl = "";
-	      output += "<tr class='shadowonhover "+ data[i].latitude + " "+ data[i].longitude + "' style='margin-top: 20px;' onclick='klikaj("+ '"' + data[i].latitude + ','+ data[i].longitude +'"' +")'><td style='padding-top: 20px;'><a href='"+parkrunURL+"' style='color: black;'><b><span style='font-family: europeblack;font-size: 16px;font-weight: 900;'>" + (i + 1) +". " + data[i].parkrunName + " (" + distance +" miles away)</span></b></a><br><br><a href='"+parkrunURL+"'>View course route</a><br><a href='"+parkrunURL+"course/'>View more information</a></td></tr>";
+	      output += "<tr class='shadowonhover "+ data[i].latitude + " "+ data[i].longitude + "' style='margin-top: 20px;' onclick='klikaj("+ '"' + data[i].latitude + ','+ data[i].longitude +'"' +")'><td style='padding: 10px;  border-radius: 15px;'><a href='"+parkrunURL+"' target='_blank' style='color: black;'><b><span style='font-family: europeblack;font-weight: 900;'>" + (i + 1) +". " + data[i].parkrunName + " (" + distance +" miles away)</span></b></a><br><br><a href='"+parkrunURL+"' target='_blank'>View course route</a><br><a href='"+parkrunURL+"course/' target='_blank'>View more information</a></td></tr>";
 	       
 	      var customIcon = '';
 	      
@@ -520,7 +553,7 @@ function tester(oldCenter, latitude, longitude, oldlat, oldlong){
 	           title: data[i].parkrunName
   		 });
   		 
-  		 marker.note = data[i].parkrunName;
+  		 marker.note = data[i].parkrunName+" Parkrun";
   		 
   		 
   		 var infobox = new google.maps.InfoWindow({
@@ -546,7 +579,11 @@ function tester(oldCenter, latitude, longitude, oldlat, oldlong){
 		           title: data[i].parkrunName
 	    		 });
 	    		 
-	    		 marker.note = data[i].parkrunName;
+	    	   
+	    	   var lowercase = data[i].parkrunName.toLowerCase();
+		 	   var finalstring = lowercase.replace(/ /g, '');      
+		       var parkrunURL = "http://www.parkrun.org.uk/"+ finalstring +"/";
+	    		 marker.note = "<p>"+data[i].parkrunName+" Parkrun</p><a href='"+parkrunURL+"' target='_blank'><p>More Info</p></a>";
 	    		 
 	    		 
 	    		 var infobox = new google.maps.InfoWindow({
@@ -570,6 +607,7 @@ function tester(oldCenter, latitude, longitude, oldlat, oldlong){
 	        output += "</table>";
 	        jQuery('#test').html(output);
 	        jQuery('#floating-panel').css('display', 'block');
+	        jQuery('.mistake').css('display', 'block');
 	         }});
 	}
 
@@ -617,8 +655,8 @@ function klikaj(test) {
 	var res = test.split(",");
 	document.getElementById('chosenlat').innerHTML= res[0];
 	document.getElementById('chosenlong').innerHTML= res[1];
-	
 	calculateAndDisplayRoute(directionsService, directionsDisplay,parseFloat(document.getElementById('centrallat').textContent),parseFloat(document.getElementById('centrallong').textContent),parseFloat(res[0]),parseFloat(res[1]));
+
 }
 
 </script>

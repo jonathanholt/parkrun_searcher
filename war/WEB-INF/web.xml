@@ -16,10 +16,10 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>ParkRunAddScriptServlet</servlet-name>
 		<servlet-class>com.jonathanholt.parkrun.ParkRunAddScriptServlet</servlet-class>
 	</servlet>
-	<servlet-mapping>
+	<!--  <servlet-mapping>
 		<servlet-name>ParkRunAddScriptServlet</servlet-name>
 		<url-pattern>/parkrunaddscript</url-pattern>
-	</servlet-mapping>
+	</servlet-mapping> -->
 			<servlet>
 		<servlet-name>ParkRunAllServlet</servlet-name>
 		<servlet-class>com.jonathanholt.parkrun.ParkRunAllServlet</servlet-class>
@@ -31,4 +31,8 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
+	<error-page>
+    <error-code>404</error-code>
+    <location>/index.html</location>
+</error-page>
 </web-app>
