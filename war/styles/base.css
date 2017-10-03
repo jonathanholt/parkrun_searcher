@@ -1,0 +1,210 @@
+.links {
+	font-size: 12px;
+	margin-left: 25%;
+}
+
+.mistake {
+	font-size: 12px;
+	display: none;
+	margin-left: 20px;
+}
+
+b {
+	font-size: 16px;
+}
+
+.title6 {
+	font-size: 14px;
+	margin-left: 24%;
+}
+
+.hideme {
+	display: none;
+}
+
+.title {
+	text-align: center;
+	font-family: opensanslight;
+}
+
+.title2 {
+	text-align: center;
+	font-family: Arial, sans-serif, Helvetica;
+	font-size: 40px;
+	letter-spacing: 1.5px;
+}
+
+.headerInner {
+	background-color: black;
+}
+
+.centerpiece {
+	margin-left: 20%;
+}
+
+.outer {
+	display: table;
+	position: absolute;
+	height: 80%;
+	width: 95%;
+}
+
+.middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.main-area {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.title {
+	font-size: 40px;
+}
+
+.search::-webkit-input-placeholder {
+	font-family: opensanslight;
+}
+
+.search {
+	font-size: 20px;
+	height: 45px;
+	width: 70%;
+	background-image: url("paper.gif");
+	background: url("./greypin.png") no-repeat 0px 5px,
+		linear-gradient(to bottom, #f7f7f8 0%, #ffffff 100%);
+	background-size: 30px 30px, auto;
+	border-radius: 3px;
+	border-top: 1px solid silver;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset, 0 -1px 0
+		rgba(0, 0, 0, 0.05) inset;
+	transition: all 0.2s linear;
+	color: #222222;
+	position: relative;
+	padding-left: 30px; `
+	-moz-box-shadow: 0px 3px 10px 0px #ccc;
+	-webkit-box-shadow: 0px 3px 10px 0px #ccc;
+	box-shadow: 0px 3px 10px 0px #ccc;
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+	outline: none;
+	border-style: solid;
+	border-color: black;
+}
+
+#magnify {
+	height: 42px;
+	width: 42px;
+	margin-bottom: -12px;
+	cursor: pointer;
+}
+
+.runningimage {
+	height: 40px;
+	width: 40px;
+	margin-bottom: -11px;
+	margin-left: 10px;
+}
+
+#map {
+	float: right;
+	display: inline;
+}
+
+.largeone {
+	width: 700px;
+	height: 400px;
+}
+
+@media screen and (max-width:420px) {
+	select {
+		height: 34px;
+		width: 80px;
+		margin-bottom: 10px;
+		font-size: 16px;
+	}
+	span {
+		font-size: 22px;
+	}
+	.mistake a {
+		font-size: 12px;
+		margin-left: 22%;
+	}
+	.links a {
+		font-size: 12px;
+	}
+	a {
+		font-size: 20px;
+	}
+	.links {
+		margin-left: 18%;
+	}
+	.title6 {
+		margin-left: 1%;
+	}
+	.centerpiece {
+		margin-left: 0px;
+	}
+	.largeone {
+		width: 100%;
+	}
+	.title2 {
+		width: 100%;
+		font-size: 25px;
+		margin-left: 0px;
+	}
+	.search {
+		width: 82%;
+		height: 48px;
+		background-size: 33px 33px, auto;
+		font-size: 24px;
+		padding-left: 34px;
+	}
+	#magnify {
+		height: 50px;
+		width: 50px;
+	}
+}
+
+.leftbar {
+	float: left;
+	margin-left: 0;
+}
+
+.lefttitle {
+	text-align: left;
+}
+
+.results-table {
+	display: none;
+	float: left;
+}
+
+#wrapper {
+	float: left;
+	width: 200px;
+}
+
+.floatleft {
+	float: left;
+	width: 100%;
+}
+
+a {
+	color: #313335;
+}
+
+table {
+	padding-bottom: 30px;
+}
+
+#floating-panel {
+	display: none;
+}
+
+.shadowonhover:hover {
+	background: #DCDCDC;
+	cursor: pointer;
+}

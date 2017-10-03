@@ -1,667 +1,116 @@
-<html>
+<!DOCTYPE HTML>
+      <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-
-    .links{
-    font-size: 12px;
-    margin-left: 25%;
-    }
-    
-    .mistake{
-    font-size: 12px;
-    display: none;
-    margin-left: 20px;
-    }
-
-b{
-font-size: 16px;
-}
-
-
-.title6{
-font-size: 14px;
-    margin-left: 24%;
-}
-
-.hideme{
-display: none;
-}
-
-
-
-
-@font-face {
-    font-family: opensanslight;
-    src: url('./OpenSans-Light.ttf');
-}
-
-@font-face {
-    font-family: europe;
-    src: url('./EuropeUnderground_light.ttf');
-}
-
-@font-face {
-    font-family: lato;
-    src: url('./Lato-Regular.ttf');
-}
-
-@font-face {
-    font-family: raleway;
-    src: url('./Raleway-Regular.ttf');
-}
-
-.title{
-text-align: center;
-font-family: opensanslight;
-}
-
-.title2{
-text-align: center;
-font-family: Arial, sans-serif, Helvetica;
-font-size: 40px;
-letter-spacing: 1.5px;
-}
-
-.headerInner{
-background-color: black;
-}
-
-
-.centerpiece{
-margin-left: 20%;
-}
-
-.outer {
-    display: table;
-    position: absolute;
-    height: 80%;
-    width: 95%;
-}
-
-.middle {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.main-area {
-    margin-left: auto;
-    margin-right: auto; 
-}
-.title{
-font-size: 40px;
-}
-.search::-webkit-input-placeholder {
-font-family: opensanslight;
-}
-
-.search{
-font-size:20px;
-height: 45px;
-width: 70%;
-background-image: url("paper.gif");
-background: url("./greypin.png") no-repeat 0px 5px, linear-gradient(to bottom, #f7f7f8 0%,#ffffff 100%);
-  background-size: 30px 30px, auto;
-  border-radius: 3px;
-  border-top: 1px solid silver;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2) inset, 0 -1px 0 rgba(0,0,0,0.05) inset;
-  transition: all 0.2s linear;
-  color: #222222;
-  position: relative;
-  padding-left: 30px;
-  
-  
-`-moz-box-shadow:    0px 3px 10px 0px #ccc;
-  -webkit-box-shadow: 0px 3px 10px 0px #ccc;
-  box-shadow:         0px 3px 10px 0px #ccc;
-}
-
-
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
-border-style: solid;
-border-color: black;
-}
-
-#magnify{
-height: 42px;
-width: 42px;
-margin-bottom: -12px;
-cursor: pointer;
-}
-
-.runningimage{
-height: 40px;
-width: 40px;
-margin-bottom: -11px;
-    margin-left: 10px;
-}
-#map{
-float: right;
-display: inline;
-}
-
-.largeone{
-width: 700px;
-height: 400px;
-}
-
-/**
-@media screen and (max-width: 555px) and (min-width: 333px) {
-.largeone{
-width: 100%;
-}
-
-.title2{
-font-size: 5vw;
-}
-}
-
-
-@media screen and (max-width: 332px) {
-
-.largeone{
-width: 100%;
-}
-.title2{
-font-size: 13px;
-}
-}
-**/
-
-@media screen and (max-width:420px)  {
-select{
-height: 34px;
-    width: 80px;
-    margin-bottom: 10px;
-    font-size: 16px;
-    }
-    
-span{
-font-size: 22px;
-}
-
-.mistake a{
-font-size: 12px;
-margin-left: 22%;
-}
-
-.links a{
-font-size: 12px;
-}
-
-
-
-a{
-font-size: 20px;
-}
-
-
-.links{
-	margin-left: 18%;
-}
-
-.title6{
-margin-left: 1%;
-}
-
-.centerpiece{
-margin-left: 0px;
-}
-
-
-.largeone{
-width: 100%;
-}
-.title2{
-width: 100%;
-font-size: 25px;
-margin-left: 0px;
-}
-
-.search{
-width: 82%;
-height: 48px;
-    background-size: 33px 33px, auto;
-    font-size: 24px;
-    padding-left: 34px;
-}
-
-#magnify{
-height: 50px;
-width: 50px;
-}
-}
-
-
-.leftbar{
-float: left;
-margin-left: 0;
-}
-
-.lefttitle{
-text-align: left;
-}
-
-.results-table{
-display: none;
-float: left;
-}  
-    #wrapper {
-        float: left;
-        width: 200px;
-    }
-    
-    .floatleft{
-    float: left;
-    width: 100%;
-    }
-    
-    a{
-    color: #313335;
-    }
-    
-    table{
-    padding-bottom: 30px;
-    }
-    
-    #floating-panel{
-    display: none;
-    }
-    
-    .shadowonhover:hover{
-    background: #DCDCDC;
-    cursor: pointer;
-    } 
-    
-
-</style>
-<title>Parkrun Search </title>
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPQ_lZgfZYY6IKror41ixzV2zhmJRTMFw&libraries=geometry&sensor=false"></script>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<title>Parkrun Search</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Description" content="Search all UK parkruns to find your nearest parkrun">
+<link rel="stylesheet" type="text/css" href="./styles/fonts.css">
+<link rel="stylesheet" type="text/css" href="./styles/base.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script
+type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPQ_lZgfZYY6IKror41ixzV2zhmJRTMFw&libraries=geometry"></script>
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./scripts/functions.js"></script>
 </head>
-<body  onload="initialize()">
-
+<body onload="initialize()">
 <div class="outer">
-  <div class="middle">
+<div class="middle">
 <div class="main-area">
-
-
 <div class="mainstuff">
 <h1 class="title2 title3">
-Find your nearest parkrun   
-<a href="http://www.parkrun.org.uk" target="_blank">
-<img class="runningimage" src="./rabbit.png">
-</a>  
+Find your nearest parkrun <a href="http://www.parkrun.org.uk"
+target="_blank"> <img class="runningimage" alt="rabbit"
+src="./images/rabbit.png">
+</a>
 </h1>
 <div class="centerpiece">
-<input class="search" id="address" type="text" name="search" placeholder="Postcode, city, town...">
-<img id="magnify" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-search-strong-128.png" onclick="codeAddress()">
-<h6 class="title6"><a href="http://www.parkrun.org.uk/" target="_blank">Click here to find out more about parkrun</a>
-</h6>
+<input class="search" id="address" type="text" name="search"
+placeholder="Postcode, city, town..."> <img id="magnify" alt="magnify"
+src="./images/scope.png" onclick="codeAddress()">
+<p class="title6">
+<a href="http://www.parkrun.org.uk/" target="_blank">Click
+here to find out more about parkrun</a>
+</p>
 </div>
 </div>
-<!--
-<iframe id="parkrunmap" src="https://www.google.com/maps/d/embed?mid=1sNWC0xC3J_Pz3XJL8hLodlszv9Q&hl=en" width="640" height="480"></iframe>
--->
-
-
-
-
 <div class="wrapper">
 <div id="floating-panel">
-    <b>Mode of Travel: </b>
-    <select id="mode">
-      <option value="DRIVING">Driving</option>
-      <option value="WALKING">Walking</option>
-      <option value="BICYCLING">Bicycling</option>
-      <option value="TRANSIT">Transit</option>
-    </select>
-    </div>
+<b>Mode of Travel: </b> <select id="mode" onchange="myFunction()">
+<option value="DRIVING">Driving</option>
+<option value="WALKING">Walking</option>
+<option value="BICYCLING">Bicycling</option>
+<option value="TRANSIT">Transit</option>
+</select>
+</div>
 <div id="map" style="display: none"></div>
 </div>
 
 <table id="test"></table>
 
 <div class="centerpiece">
-<h6 class="links">Created by <a href="http://www.jonathan-holt.co.uk/" target="_blank">Jonathan Holt</a> & <a href="https://uk.linkedin.com/in/alicia-boulter-656a4113a" target="_blank">Alicia Boulter</a></h6>
-<h6 class="title6 mistake"><a href='mailto:jonathanholt1989@gmail.com'>Spotted a mistake? Get in touch</a>
-</h6>
+<p class="title6 mistake">&nbsp;&nbsp;&nbsp;&nbsp;
+<a href='mailto:jonathanholt1989@gmail.com'>Spotted a mistake? Get in touch</a>
+</p>
 </div>
-
-
 <p class="hideme" id="centrallat"></p>
-
 <p class="hideme" id="centrallong"></p>
-
 <p class="hideme" id="chosenlat"></p>
 <p class="hideme" id="chosenlong"></p>
 
-
-<script>
-
-jQuery(".search").on('keyup', function (e) {
-    if (e.keyCode == 13) {
-    	codeAddress();
-    }
-});
-
-var runs = [];
-var directionsDisplay = new google.maps.DirectionsRenderer;
-var directionsService = new google.maps.DirectionsService;
-
-jQuery(document).ready(function(){
-geocoder = new google.maps.Geocoder();
-});
-
-// ***** ADDING SOME VARIABLES *****//
-var geocoder = new google.maps.Geocoder();
-var map;
-var locations = [
-                 ['Title A', 3.180967,101.715546, 1],
-                 ['Title B', 3.200848,101.616669, 2],
-                 ['Title C', 3.147372,101.597443, 3],
-                 ['Title D', 3.19125,101.710052, 4]
-            ];
-            
-// ***** INITIALIZE FUNCTION *****//
-function initialize() {
-  geocoder = new google.maps.Geocoder();
-  var latlng = new google.maps.LatLng(-34.397, 150.644);
-  var mapOptions = {
-    zoom: 11,
-    center: latlng
-  };
- 
-  map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-}
-
-
-function codeAddress() {
-
-//jQuery('#map').css("width", "600px");
-//jQuery('#map').css("height", "400px");
-jQuery('#map').css("display", "relative");
-jQuery('#map').addClass('largeone');
-jQuery('#test').html('<img src="http://www.prague-rental-apartments.com/plugins/vdslider/loader.gif"/>');
-initialize();
-directionsDisplay.setMap(map);
-directionsDisplay.setOptions( { suppressMarkers: true, preserveViewport: true } );
-centralLocation = null;
-var address = document.getElementById('address').value;
-geocoder.geocode( { 'address': address}, function(results, status) {
-  if (status == 'OK') {
-      
-    centralLocation = new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng());
-      map.setCenter(results[0].geometry.location);
-    var marker = new google.maps.Marker({
-        map: map,
-        position: results[0].geometry.location,
-        icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
-    });
-    //alert("succeeded");
-               
-               
-  tester(centralLocation, results[0].geometry.location.lat(), results[0].geometry.location.lng(), results[0].geometry.location.lat(), results[0].geometry.location.lng());
-  } else {
-    alert('Geocode was not successful for the following reason: ' + status);
-  }
-});
-}
-
-function tester(oldCenter, latitude, longitude, oldlat, oldlong){  
-	output = "<table class='results-table'>";
-	jQuery.ajax({
-	         type : "GET",
-	         url : "/parkrunsearch",
-	         data:{"lat":latitude,"long":longitude},
-	         dataType: 'json',
-	         success : function(data) {
-	 
-	        for(i = 0; i < data.length; i++){
-	      var parkrunLocation = new google.maps.LatLng(data[i].latitude, data[i].longitude);
-	      var distance = parseFloat(calcDistance(parkrunLocation, oldCenter));
-	      
-	      /**
-	      var icon = {
-	         url: data[i].markerUrl, // url
-	         scaledSize: new google.maps.Size(50, 50), // scaled size
-	         origin: new google.maps.Point(0,0), // origin
-	         anchor: new google.maps.Point(0, 0) // anchor
-	      };
-	      
-	      var contentString = '<div id="content">'+
-	            '<div id="siteNotice">'+
-	            '</div>'+
-	            '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-	            '<div id="bodyContent">'+
-	            '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-	            'sandstone rock formation in the southern part of the '+
-	            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-	            'south west of the nearest large town, Alice Springs; 450&#160;km '+
-	            '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-	            'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-	            'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-	            'Aboriginal people of the area. It has many springs, waterholes, '+
-	            'rock caves and ancient paintings. Uluru is listed as a World '+
-	            'Heritage Site.</p>'+
-	            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-	            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-	            '(last visited June 22, 2009).</p>'+
-	            '</div>'+
-	            '</div>';
-	            
-	            var infowindow = new google.maps.InfoWindow({
-	                content: contentString
-	              });
-
-	      var marker = new google.maps.Marker({
-	             map: map,
-	             position: parkrunLocation,
-	            icon: icon,
-	             title: 'Uluru (Ayers Rock)'
-	         });
-	      
-	      
-	         for(i = 0; i < runs.length; i ++){
-	    	  //console.log(runs[i][0]); 
-	    		var myLatLng = {lat: parseFloat(runs[i][1]), lng: parseFloat(runs[i][2])};
-	    		 marker = new google.maps.Marker({
-	    			    position: myLatLng,
-	    			    map: map,
-	    			    title: runs[i][0]
-	    		 });
-	    		 
-	    		 marker.note = runs[i][0];
-	    		 
-	    		 
-	    		 var infobox = new google.maps.InfoWindow({
-	    	         content: 'Hello world'
-	    	     });
-	    		 
-	           /**
-	    		 google.maps.event.addListener(marker , 'click', function(){
-	    			 var info_window = new google.maps.InfoWindow();
-	    			 //alert(this.note);
-	    			 //alert(this.title);
-	    			 //infobox.setContent = 'Goodbye world';
-	    			 infobox.setContent(this.note);
-	    			 infobox.open(this.getMap(), this);
-	    			 //alert(infobox.content); //displays 'blablabla'
-	    		  });
-	          
-	           
-	           
-	    			  }
-	         **/
-	         
-	         
-	         var myLatLng = {lat: parseFloat(data[i].latitude), lng: parseFloat(data[i].longitude)};
-
-	       if(i == 0){
-	    	   document.getElementById('centrallat').innerHTML= oldlat;
-	    	   document.getElementById('centrallong').innerHTML= oldlong;
-	    	   document.getElementById('chosenlat').innerHTML= data[i].latitude;
-	    	   document.getElementById('chosenlong').innerHTML= data[i].longitude;
-	    	   
-	    	   calculateAndDisplayRoute(directionsService, directionsDisplay,oldlat,oldlong,parseFloat(data[i].latitude),parseFloat(data[i].longitude));
-	       }
-	         
-	       if(i < 5){
-	         var lowercase = data[i].parkrunName.toLowerCase();
-	 		var finalstring = lowercase.replace(/ /g, '');      
-	       var parkrunURL = "http://www.parkrun.org.uk/"+ finalstring +"/";
-	       var parkrunPageUrl = "";
-	      output += "<tr class='shadowonhover "+ data[i].latitude + " "+ data[i].longitude + "' style='margin-top: 20px;' onclick='klikaj("+ '"' + data[i].latitude + ','+ data[i].longitude +'"' +")'><td style='padding: 10px;  border-radius: 15px;'><a href='"+parkrunURL+"' target='_blank' style='color: black;'><b><span style='font-family: europeblack;font-weight: 900;'>" + (i + 1) +". " + data[i].parkrunName + " (" + distance +" miles away)</span></b></a><br><br><a href='"+parkrunURL+"' target='_blank'>View course route</a><br><a href='"+parkrunURL+"course/' target='_blank'>View more information</a></td></tr>";
-	       
-	      var customIcon = '';
-	      
-	      
-	      
-	      switch (i) {
-	      case 0:
-	    	  customIcon = "https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_red1.png";
-	          break;
-	      case 1:
-	    	  customIcon = "https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_red2.png";
-	          break;
-	      case 2:
-	    	  customIcon = "https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_red3.png";
-	          break;
-	      case 3:
-	    	  customIcon = "https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_red4.png";
-	          break;
-	      case 4:
-	    	  customIcon = "https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_red5.png";
-	          break;
-	  }
-	      
-	      
-	      var marker = new google.maps.Marker({
-	           position: myLatLng,
-	           map: map,
-	           icon: customIcon,
-	           title: data[i].parkrunName
-  		 });
-  		 
-  		 marker.note = data[i].parkrunName+" Parkrun";
-  		 
-  		 
-  		 var infobox = new google.maps.InfoWindow({
-  	         content: 'Hello world'
-  	     });
-  		 
-        
-  		 google.maps.event.addListener(marker , 'click', function(){
-  			 var info_window = new google.maps.InfoWindow();
-  			 //alert(this.note);
-  			 //alert(this.title);
-  			 //infobox.setContent = 'Goodbye world';
-  			 infobox.setContent(this.note);
-  			 infobox.open(this.getMap(), this);
-  			 //alert(infobox.content); //displays 'blablabla'
-  		  });
-	       }
-	       
-	       else{
-	    	   var marker = new google.maps.Marker({
-		           position: myLatLng,
-		           map: map,
-		           title: data[i].parkrunName
-	    		 });
-	    		 
-	    	   
-	    	   var lowercase = data[i].parkrunName.toLowerCase();
-		 	   var finalstring = lowercase.replace(/ /g, '');      
-		       var parkrunURL = "http://www.parkrun.org.uk/"+ finalstring +"/";
-	    		 marker.note = "<p>"+data[i].parkrunName+" Parkrun</p><a href='"+parkrunURL+"' target='_blank'><p>More Info</p></a>";
-	    		 
-	    		 
-	    		 var infobox = new google.maps.InfoWindow({
-	    	         content: 'Hello world'
-	    	     });
-	    		 
-	          
-	    		 google.maps.event.addListener(marker , 'click', function(){
-	    			 var info_window = new google.maps.InfoWindow();
-	    			 //alert(this.note);
-	    			 //alert(this.title);
-	    			 //infobox.setContent = 'Goodbye world';
-	    			 infobox.setContent(this.note);
-	    			 infobox.open(this.getMap(), this);
-	    			 //alert(infobox.content); //displays 'blablabla'
-	    		  });  
-	       }
-	       
-	         
-	     }
-	        output += "</table>";
-	        jQuery('#test').html(output);
-	        jQuery('#floating-panel').css('display', 'block');
-	        jQuery('.mistake').css('display', 'block');
-	         }});
-	}
-
-
-// calculates distance between two points in miles
-function calcDistance(p1, p2){
-    return (google.maps.geometry.spherical.computeDistanceBetween(p1, p2) / 1000 / 1.6).toFixed(2);
-}
-
-function executeInOrder(data){
-}
-
-document.getElementById('mode').addEventListener('change', function() {
-	var centralatitude = parseFloat(document.getElementById('centrallat').textContent);
-	var centralongitude = parseFloat(document.getElementById('centrallong').textContent);
-	var chosenlatitude = parseFloat(document.getElementById('chosenlat').textContent);
-	var chosenlongitude = parseFloat(document.getElementById('chosenlong').textContent);
-	calculateAndDisplayRoute(directionsService, directionsDisplay,centralatitude,centralongitude,chosenlatitude,chosenlongitude);
+</div>
+</div>
+</div>
+	<script type="text/javascript">
+	jQuery(".search").on('keyup', function(e) {
+		if (e.keyCode == 13) {
+			codeAddress();
+		}
 	});
+	
+	document.getElementById('mode').addEventListener(
+			'change',
+			function() {
+				var centralatitude = parseFloat(document
+						.getElementById('centrallat').textContent);
+				var centralongitude = parseFloat(document
+						.getElementById('centrallong').textContent);
+				var chosenlatitude = parseFloat(document
+						.getElementById('chosenlat').textContent);
+				var chosenlongitude = parseFloat(document
+						.getElementById('chosenlong').textContent);
+				calculateAndDisplayRoute(directionsService, directionsDisplay,
+						centralatitude, centralongitude, chosenlatitude,
+						chosenlongitude);
+			});
 
-function calculateAndDisplayRoute(directionsService, directionsDisplay, originLat, originLong, firstLat, firstLong) {
-	if(originLat != 0){
-    var selectedMode = document.getElementById('mode').value;
-    directionsService.route({
-      origin: {lat: originLat, lng: originLong},  // Haight.
-      destination: {lat: firstLat, lng: firstLong},  // Ocean Beach.
-      // Note that Javascript allows us to access the constant
-      // using square brackets and a string value as its
-      // "property."
-      travelMode: google.maps.TravelMode[selectedMode]
-    }, function(response, status) {
-      if (status == 'OK') {
-        directionsDisplay.setDirections(response);
-      } else {
-        window.alert('Directions request failed due to ' + status);
-      }
-    });
+	function calculateAndDisplayRoute(directionsService, directionsDisplay,
+			originLat, originLong, firstLat, firstLong) {
+		if (originLat != 0) {
+			var selectedMode = document.getElementById('mode').value;
+			directionsService.route({
+				origin : {
+					lat : originLat,
+					lng : originLong
+				}, // Haight.
+				destination : {
+					lat : firstLat,
+					lng : firstLong
+				}, // Ocean Beach.
+				// Note that Javascript allows us to access the constant
+				// using square brackets and a string value as its
+				// "property."
+				travelMode : google.maps.TravelMode[selectedMode]
+			}, function(response, status) {
+				if (status == 'OK') {
+					directionsDisplay.setDirections(response);
+				} else {
+					window.alert('Directions request failed due to ' + status);
+				}
+			});
+		}
 	}
-  }
-  
-  
-  
-  
-function klikaj(test) {
-	var res = test.split(",");
-	document.getElementById('chosenlat').innerHTML= res[0];
-	document.getElementById('chosenlong').innerHTML= res[1];
-	calculateAndDisplayRoute(directionsService, directionsDisplay,parseFloat(document.getElementById('centrallat').textContent),parseFloat(document.getElementById('centrallong').textContent),parseFloat(res[0]),parseFloat(res[1]));
-
-}
-
-</script>
-</div>
-</div>
-</div>
+	</script>
 </body>
 </html>
