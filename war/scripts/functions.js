@@ -44,6 +44,9 @@ function codeAddress() {
 	});
 	centralLocation = null;
 	var address = document.getElementById('address').value;
+	if(address == "Sheffield"){
+			address = "S1 2EL";
+	}
 	geocoder.geocode({
 		'address' : address
 	}, function(results, status) {
